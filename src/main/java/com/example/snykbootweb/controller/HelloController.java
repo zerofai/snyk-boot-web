@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping ("/")
     public String sayHello () {
-        return "hello world web app for snyk demo";
+        return "hello world web app for snyk springboot jdbc demo";
     }
 }
