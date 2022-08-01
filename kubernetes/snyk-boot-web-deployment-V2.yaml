@@ -33,3 +33,9 @@ spec:
             capabilities:
               drop:
                 - all
+          volumeMounts:
+            - name: temp-storage
+              mountPath: /tmp
+      volumes:
+        - name: temp-storage
+          emptyDir: {}
