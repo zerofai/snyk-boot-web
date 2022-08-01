@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: snyk-boot-web
-  namespace: apples
+  name: snyk-boot-web-argocd
 spec:
   selector:
     matchLabels:
-      app: snyk-boot-web
+      app: snyk-boot-web-argocd
   replicas: 1
   template:
     metadata:
       labels:
-        app: snyk-boot-web
+        app: snyk-boot-web-argocd
     spec:
       containers:
-        - name: snyk-boot-web
+        - name: snyk-boot-web-argocd
           image: pasapples/snyk-boot-web:v1
           imagePullPolicy: Always
           ports:
