@@ -16,6 +16,7 @@ spec:
             - git clone https://github.com/papicella/snyk-boot-web;
               snyk auth $SNYK_TOKEN;
               snyk iac test snyk-boot-web/argocd/snyk-boot-app-v1.yaml || true;
+              snyk container test pasapples/snyk-boot-web:v1 --severity-threshold=critical || true;
           env:
             - name: SNYK_TOKEN
               valueFrom:
